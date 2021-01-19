@@ -16,6 +16,7 @@ body{
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    perspective: 1000px;
 }
 
 .card{
@@ -27,6 +28,8 @@ body{
     box-shadow: 1px 1px 1px rgba(1, 1, 1, 0.3);
     cursor: pointer;
     transform: scale(1);
+    transform-style: preserve-3d; /*não deixa o elemento achatado quando esta se virando*/
+    transition: transform .9s;
 }
 
 .card:active{
@@ -37,8 +40,18 @@ body{
 .card-front,
 .card-back{
     width: 100%;
-    height: 102%;
+    height: 100%;
     object-fit: cover;
     position: absolute;
     background: #d0d33f;
+    backface-visibility: hidden; /*esconde o elemento quando ele esta ao contrario */
+}
+
+.card-front{
+    transform: rotateY(180deg);
+}
+
+/*===================FLIP CARD ANIMATION==============*/
+.card.flip{
+    transform: rotateY(180deg);
 }
