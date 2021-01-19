@@ -25,7 +25,7 @@ body{
     margin: 5px;
     position: relative;
     border-radius: 5px;
-    box-shadow: 1px 1px 1px rgba(1, 1, 1, 0.3);
+    /*box-shadow: 1px 1px 1px rgba(1, 1, 1, 0.3);*/
     cursor: pointer;
     transform: scale(1);
     transform-style: preserve-3d; /*não deixa o elemento achatado quando esta se virando*/
