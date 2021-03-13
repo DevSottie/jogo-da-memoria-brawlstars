@@ -30,6 +30,7 @@ body{
     transform: scale(1);
     transform-style: preserve-3d; /*não deixa o elemento achatado quando esta se virando*/
     transition: transform .9s;
+    background: url("../resources/img/fundo-cartas.jpg");
 }
 
 .card:active{
@@ -43,7 +44,6 @@ body{
     height: 100%;
     object-fit: cover;
     position: absolute;
-    background: #d0d33f;
     backface-visibility: hidden; /*esconde o elemento quando ele esta ao contrario */
 }
 
